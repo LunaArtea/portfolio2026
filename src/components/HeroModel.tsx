@@ -16,7 +16,7 @@ function WalleModel() {
   );
 }
 
-export function HeroModel() {
+export default function HeroModel() {
   return (
     <div className="absolute inset-[-18%] z-10 cursor-grab active:cursor-grabbing">
       <Canvas
