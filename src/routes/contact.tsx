@@ -21,21 +21,21 @@ export const Route = createFileRoute("/contact")({
 const channels = [
   {
     label: "Email",
-    value: "hello@lunagalilea.com",
-    href: "mailto:hello@lunagalilea.com",
+    value: "lunagam.la@gmail.com",
+    href: "mailto:lunagam.la@gmail.com",
     icon: "mail",
   },
   {
     label: "LinkedIn",
-    value: "linkedin.com/in/lunagalilea",
-    href: "https://www.linkedin.com/",
+    value: "linkedin.com/in/luna-galilea-artea-magana-bb0365198",
+    href: "https://www.linkedin.com/in/luna-galilea-artea-magana-bb0365198/",
     icon: "link",
   },
   {
-    label: "Behance",
-    value: "behance.net/lunagalilea",
-    href: "https://www.behance.net/",
-    icon: "palette",
+    label: "WhatsApp",
+    value: "+52 618 208 6926",
+    href: "https://wa.me/526182086926",
+    icon: "chat",
   },
 ] as const;
 
@@ -50,7 +50,7 @@ function ContactPage() {
       </h1>
       <p className="mt-6 max-w-xl text-lg leading-relaxed text-md-on-surface-variant">
         I&rsquo;m open to freelance projects, full-time roles and conversations about enterprise UX
-        or design systems. The fastest way to reach me is by email.
+        or design systems. You can reach me by email, LinkedIn or WhatsApp.
       </p>
 
       <ul className="mt-12 space-y-4">
