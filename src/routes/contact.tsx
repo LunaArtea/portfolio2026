@@ -42,16 +42,13 @@ const channels = [
 function ContactPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-      <p className="text-sm tracking-[0.4em] text-md-on-surface-variant">
-        * CONTACT *
-      </p>
+      <p className="text-sm tracking-[0.4em] text-md-on-surface-variant">* CONTACT *</p>
       <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-md-on-background sm:text-5xl">
         Let&rsquo;s talk about your next product.
       </h1>
       <p className="mt-6 max-w-xl text-lg leading-relaxed text-md-on-surface-variant">
-        I&rsquo;m open to freelance projects, full-time roles and conversations
-        about enterprise UX or design systems. The fastest way to reach me is
-        by email.
+        I&rsquo;m open to freelance projects, full-time roles and conversations about enterprise UX
+        or design systems. The fastest way to reach me is by email.
       </p>
 
       <ul className="mt-12 space-y-4">
@@ -64,19 +61,14 @@ function ContactPage() {
               className="group flex items-center justify-between gap-4 rounded-2xl border border-md-outline-variant bg-md-surface-container-low p-5 transition-colors hover:bg-md-primary-container"
             >
               <div className="flex items-center gap-4">
-                <span
-                  aria-hidden
-                  className="material-symbols-outlined text-md-primary"
-                >
+                <span aria-hidden className="material-symbols-outlined text-md-primary">
                   {channel.icon}
                 </span>
                 <div>
                   <p className="text-xs uppercase tracking-wider text-md-on-surface-variant">
                     {channel.label}
                   </p>
-                  <p className="font-display text-lg text-md-on-surface">
-                    {channel.value}
-                  </p>
+                  <p className="font-display text-lg text-md-on-surface">{channel.value}</p>
                 </div>
               </div>
               <span

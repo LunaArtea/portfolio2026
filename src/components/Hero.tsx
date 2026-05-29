@@ -17,10 +17,9 @@ export function Hero() {
 
       <div className="relative mt-12 flex flex-col items-center justify-center gap-10 md:mt-16 md:flex-row md:gap-[100px]">
         <p className="max-w-md font-display text-lg leading-relaxed text-md-on-primary-container sm:text-xl">
-          Product Designer <em className="font-bold italic">specializing</em> in
-          enterprise products, UX <em className="font-bold italic">research</em>,
-          and scalable <em className="font-bold italic">design systems</em> for
-          B2B platforms.
+          Product Designer <em className="font-bold italic">specializing</em> in enterprise
+          products, UX <em className="font-bold italic">research</em>, and scalable{" "}
+          <em className="font-bold italic">design systems</em> for B2B platforms.
         </p>
 
         <div
