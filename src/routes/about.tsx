@@ -1,4 +1,7 @@
+import { lazy, Suspense } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+
+const HeroModel = lazy(() => import("@/components/HeroModel"));
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -112,10 +115,24 @@ function AboutPage() {
         </ul>
       </section>
 
-      <blockquote className="mt-16 max-w-5xl font-display text-4xl font-[950] italic leading-tight text-md-primary sm:text-5xl lg:text-6xl">
-        Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
-        that we are wrong to keep our eyes open... -Rob
-      </blockquote>
+      <section className="mt-16 grid gap-8 md:grid-cols-[1fr_16rem] md:items-center">
+        <blockquote className="font-display text-[2.625rem] font-[950] italic leading-tight text-[#8C4A60]">
+          Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
+          that we are wrong to keep our eyes open... -Rob
+        </blockquote>
+        <div
+          aria-label="Interactive 3D WALL-E head"
+          className="relative mx-auto h-52 w-52 shrink-0 overflow-visible sm:h-60 sm:w-60"
+        >
+          <div
+            aria-hidden
+            className="absolute inset-[22%] rounded-full bg-md-primary-container/70"
+          />
+          <Suspense fallback={null}>
+            <HeroModel />
+          </Suspense>
+        </div>
+      </section>
 
       <section className="mt-14">
         <h2 className="font-display text-2xl font-bold text-md-on-background">Core competencies</h2>
