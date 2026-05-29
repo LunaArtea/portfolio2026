@@ -8,9 +8,9 @@ function WalleModel() {
   const { scene } = useGLTF(modelUrl);
 
   return (
-    <Bounds fit clip observe margin={1.75}>
+    <Bounds fit clip observe margin={1.25}>
       <Center>
-        <primitive object={scene} rotation={[0, -0.55, 0]} />
+        <primitive object={scene} rotation={[0, -1.35, 0]} />
       </Center>
     </Bounds>
   );
@@ -18,9 +18,9 @@ function WalleModel() {
 
 export default function HeroModel() {
   return (
-    <div className="absolute inset-[-8%] z-10 cursor-grab active:cursor-grabbing">
+    <div className="absolute inset-[-34%] z-10 cursor-grab active:cursor-grabbing">
       <Canvas
-        camera={{ position: [0, 0.7, 4.6], fov: 32 }}
+        camera={{ position: [0, 0.7, 4.8], fov: 33 }}
         dpr={[1, 1.75]}
         gl={{ antialias: true, alpha: true }}
       >
