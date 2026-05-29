@@ -1,0 +1,181 @@
+import { Link, createFileRoute } from "@tanstack/react-router";
+
+import smartProject from "@/assets/smart-project.jpg";
+import smartFlow from "@/assets/smart-flow.jpg";
+
+export const Route = createFileRoute("/smart-project")({
+  head: () => ({
+    meta: [
+      { title: "Smart Project Case Study - Luna Galilea" },
+      {
+        name: "description",
+        content:
+          "Smart Project UX/UI case study: a Windows desktop and web experience for time tracking, project visibility, and operational follow-up.",
+      },
+      { property: "og:title", content: "Smart Project Case Study - Luna Galilea" },
+      {
+        property: "og:description",
+        content:
+          "UX/UI process for Smart Project, from research and definition to prototyping, testing, and handoff.",
+      },
+    ],
+  }),
+  component: SmartProjectPage,
+});
+
+const phases = [
+  {
+    label: "01 / Empathize",
+    title: "Understanding the workflow",
+    description:
+      "I reviewed how teams tracked work time, project progress, task ownership, and operational follow-up across desktop and web contexts. The goal was to identify friction points before proposing interface changes.",
+  },
+  {
+    label: "02 / Define",
+    title: "Clarifying the product problem",
+    description:
+      "The main challenge was to make project status, time registration, and progress visibility easier to understand without adding more administrative effort for users.",
+  },
+  {
+    label: "03 / Ideate",
+    title: "Exploring interaction models",
+    description:
+      "I mapped flows, wireframes, and screen states for different user roles, considering both Windows desktop constraints and web behaviors so the experience could remain consistent across platforms.",
+  },
+  {
+    label: "04 / Prototype",
+    title: "Designing high-fidelity validation",
+    description:
+      "I created interactive Figma prototypes to validate navigation, hierarchy, forms, tables, and dashboard views with stakeholders before moving into implementation handoff.",
+  },
+  {
+    label: "05 / Test",
+    title: "Reducing uncertainty early",
+    description:
+      "Usability testing and heuristic review helped refine language, density, visual hierarchy, and task completion patterns before development investment increased.",
+  },
+  {
+    label: "06 / Deliver",
+    title: "Preparing design handoff",
+    description:
+      "The final UI documentation included component behavior, responsive considerations, interaction states, and notes for platform-specific implementation constraints.",
+  },
+] as const;
+
+function SmartProjectPage() {
+  return (
+    <article className="mx-auto max-w-6xl px-6 py-10 sm:py-14">
+      <Link
+        to="/"
+        className="inline-flex items-center gap-2 rounded-full border border-md-outline-variant bg-md-surface-container-low px-4 py-2 text-sm font-semibold text-md-on-surface-variant transition-colors hover:bg-md-primary-container hover:text-md-on-primary-container"
+      >
+        <span aria-hidden className="material-symbols-outlined text-base">
+          arrow_back
+        </span>
+        Back
+      </Link>
+
+      <header className="mt-12 grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+        <div>
+          <p className="text-left font-display text-base font-semibold tracking-[0.4em] text-md-on-surface-variant sm:text-lg">
+            * CASE STUDY *
+          </p>
+          <h1 className="mt-4 font-display text-5xl font-bold leading-tight text-md-on-background sm:text-6xl">
+            Smart Project
+          </h1>
+          <p className="mt-6 text-lg leading-relaxed text-md-on-surface-variant">
+            A UX/UI process for a Windows desktop and web product focused on working-time tracking,
+            project progress, visibility, and team follow-up.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-2 text-sm text-md-on-surface-variant">
+            {[
+              "Enterprise UX",
+              "Desktop + Web",
+              "Design Thinking",
+              "Figma Prototyping",
+              "Handoff",
+            ].map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-md-outline-variant bg-md-surface-container-low px-4 py-2"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        <div className="overflow-hidden rounded-3xl bg-md-primary-container p-4 shadow-sm">
+          <img
+            src={smartProject}
+            alt="Smart Project desktop application mockup"
+            width={1024}
+            height={1024}
+            className="aspect-[4/3] w-full rounded-2xl object-cover"
+          />
+        </div>
+      </header>
+
+      <section className="mt-20 grid gap-6 md:grid-cols-3">
+        <div className="rounded-3xl bg-md-surface-variant p-6 md:col-span-1">
+          <p className="font-display text-3xl font-bold leading-tight text-md-on-surface-variant">
+            UX/UI process shaped around Design Thinking.
+          </p>
+        </div>
+        <div className="grid gap-6 md:col-span-2 md:grid-cols-2">
+          {phases.map((phase) => (
+            <article
+              key={phase.label}
+              className="rounded-3xl border border-md-outline-variant bg-md-surface-container-low p-6"
+            >
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-md-primary">
+                {phase.label}
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-bold text-md-on-surface">
+                {phase.title}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-md-on-surface-variant">
+                {phase.description}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-20 grid gap-8 rounded-3xl bg-md-surface-variant p-8 sm:p-10 md:grid-cols-2 md:items-center">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-md-on-surface-variant">
+            Next case study
+          </p>
+          <h2 className="mt-4 font-display text-4xl font-bold text-md-on-surface-variant">
+            Smart Flow
+          </h2>
+          <p className="mt-4 max-w-md text-md-on-surface-variant/80">
+            Continue with the geolocation and tracking experience for map-based operational
+            visibility.
+          </p>
+          <Link
+            to="/"
+            hash="featured-work"
+            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-md-on-surface-variant underline underline-offset-4 transition-colors hover:text-md-primary"
+          >
+            View next case
+            <span aria-hidden className="material-symbols-outlined text-base">
+              arrow_forward
+            </span>
+          </Link>
+        </div>
+        <div className="overflow-hidden rounded-2xl bg-md-surface">
+          <img
+            src={smartFlow}
+            alt="Smart Flow geolocation dashboard mockup"
+            width={1024}
+            height={1024}
+            loading="lazy"
+            className="aspect-[4/3] w-full object-cover"
+          />
+        </div>
+      </section>
+    </article>
+  );
+}

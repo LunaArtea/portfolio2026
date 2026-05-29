@@ -15,6 +15,10 @@ export function ProjectCard({
   imageAlt,
   reverse = false,
 }: ProjectCardProps) {
+  const isExternal = href.startsWith("http");
+  const basePath = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const linkHref = !isExternal && href.startsWith("/") ? `${basePath}${href}` : href;
+
   return (
     <article
       className={`grid gap-8 rounded-2xl bg-md-surface-variant p-8 sm:p-12 md:grid-cols-2 md:items-center md:gap-12 ${
@@ -29,9 +33,9 @@ export function ProjectCard({
           {description}
         </p>
         <a
-          href={href}
-          target="_blank"
-          rel="noreferrer noopener"
+          href={linkHref}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noreferrer noopener" : undefined}
           className="group inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-md-on-surface-variant underline underline-offset-4 transition-colors hover:text-md-primary"
         >
           View case study

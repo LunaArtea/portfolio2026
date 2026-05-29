@@ -112,6 +112,11 @@ function AboutPage() {
         </ul>
       </section>
 
+      <blockquote className="mt-16 max-w-5xl font-display text-4xl font-black italic leading-tight text-md-on-background sm:text-5xl lg:text-6xl">
+        Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
+        that we are wrong to keep our eyes open... -Rob
+      </blockquote>
+
       <section className="mt-14">
         <h2 className="font-display text-2xl font-bold text-md-on-background">Core competencies</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
@@ -136,11 +141,6 @@ function AboutPage() {
           ))}
         </div>
       </section>
-
-      <blockquote className="mt-16 max-w-3xl font-display text-lg leading-relaxed text-md-on-primary-container sm:text-xl">
-        Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
-        that we are wrong to keep our eyes open... -Rob
-      </blockquote>
     </section>
   );
 }

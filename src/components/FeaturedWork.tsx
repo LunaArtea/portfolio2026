@@ -8,7 +8,7 @@ const projects = [
     title: "Smart Project",
     description:
       "Desktop application (for Windows) and web; focused on tracking working time and project progress.",
-    href: "#", // TODO: replace with real case study URL
+    href: "/smart-project",
     image: smartProject,
     imageAlt: "Smart Project desktop application mockup",
   },
@@ -32,7 +32,7 @@ const projects = [
 
 export function FeaturedWork() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16">
+    <section id="featured-work" className="mx-auto max-w-6xl px-6 py-16">
       <p className="text-left font-display text-base font-semibold tracking-[0.4em] text-md-on-surface-variant sm:text-lg">
         * FEATURED WORK *
       </p>
