@@ -7,13 +7,13 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "About Luna Galilea: Product Designer with 6 years of experience in enterprise digital products, scalable design systems, UX research, accessibility, and data-driven product design.",
+          "About Luna Galilea: Product Designer with 6 years of experience in enterprise digital products, UX research, accessibility, and scalable design systems.",
       },
       { property: "og:title", content: "About - Luna Galilea" },
       {
         property: "og:description",
         content:
-          "Product Designer specializing in enterprise products, design systems, UX research, accessibility, and data-driven design.",
+          "Product Designer specializing in enterprise products, UX research, accessibility, and scalable design systems.",
       },
     ],
   }),
@@ -22,48 +22,45 @@ export const Route = createFileRoute("/about")({
 
 const achievements = [
   "Led multi-platform design systems for 24 enterprise products used by 50,000+ users, reducing UI development time by 40%.",
-  "Increased product NPS from 45 to 68 through UX research, iterative usability testing, and data-informed improvements.",
-  "Implemented WCAG 2.1 AA compliance across product interfaces, improving universal accessibility and reducing legal risk.",
-  "Designed high-fidelity interactive Figma prototypes that reduced validation cycles by 30% through early user and stakeholder testing.",
-  "Established collaboration workflows with Development, PMs, and QA using Azure DevOps and Monday, reducing handoff errors by 50%.",
+  "Increased product NPS from 45 to 68 through UX research, usability testing, and data-informed iteration.",
+  "Implemented WCAG 2.1 AA standards across product interfaces to strengthen accessibility and consistency.",
+  "Established design collaboration workflows with Dev, PMs, and QA, reducing handoff errors by 50%.",
 ] as const;
 
 const competencyGroups = [
   {
-    title: "Digital Product Design",
+    title: "Product Design",
     items: [
       "Advanced Figma: prototypes, variables, and auto layout",
-      "Wireframes, mockups, and user flows",
+      "Wireframes, mockups, user flows, and responsive UI",
       "Scalable design systems and reusable components",
-      "Responsive and multi-device design",
       "WCAG 2.1 AA/AAA accessibility",
     ],
   },
   {
-    title: "UX Research & Data-Driven Design",
+    title: "Research & Metrics",
     items: [
-      "Usability testing and heuristic evaluations",
-      "Tree testing and task analysis",
+      "Usability testing, heuristic evaluations, tree testing, and task analysis",
       "Google Analytics, Maze, and Optimal Workshop",
       "NPS, conversion rate, and task success analysis",
       "Design thinking and agile methods",
     ],
   },
   {
-    title: "Collaboration & Tools",
+    title: "Collaboration",
     items: [
       "Azure DevOps, Monday, and Trello",
-      "Agile work environments and Scrum Master certification",
+      "Agile environments and Scrum Master certification",
       "Design handoff for development and QA",
       "Stakeholder management",
     ],
   },
   {
-    title: "Platforms & Technology Context",
+    title: "Platform-Aware Design",
     items: [
-      "Web product context: React, Tailwind, and Bootstrap",
-      "Mobile product context: native iOS, native Android, and Xamarin",
-      "Legacy product context: .NET, Windows Forms, C++, C#, and Java",
+      "Web contexts: React, Tailwind, and Bootstrap",
+      "Mobile contexts: native iOS, native Android, and Xamarin",
+      "Desktop and legacy contexts: .NET, Windows Forms, C++, C#, and Java",
       "Adobe Suite: Photoshop, Illustrator, and After Effects",
     ],
   },
@@ -77,36 +74,30 @@ function AboutPage() {
       </p>
       <div className="mt-4 max-w-4xl">
         <h1 className="font-display text-4xl font-bold leading-tight text-md-on-background sm:text-5xl">
-          Designing enterprise tools that scale without losing clarity.
+          Designing enterprise products with clarity, structure, and intent.
         </h1>
 
         <div className="mt-10 space-y-6 text-lg leading-relaxed text-md-on-surface-variant">
           <p>
-            I&rsquo;m Luna Galilea, a Product Designer with 6 years of experience specializing in
-            digital product design and scalable systems for enterprise applications. My work lives
-            at the intersection of UX research, interaction design, accessibility, and design
-            systems that help teams ship consistent product over time.
+            I&rsquo;m Luna Galilea, a Product Designer with 6 years of experience in digital
+            products, UX research, accessibility, and scalable design systems for enterprise
+            applications.
           </p>
           <p>
-            I&rsquo;m an advanced Figma user with strong experience in interactive prototyping,
-            wireframes, multi-device design systems, and reusable UI components. My approach is
-            data-driven: I use user research, continuous testing, and metrics such as NPS, task
-            success rate, conversion signals, and Google Analytics to guide design decisions.
+            My work is data-driven and grounded in continuous validation: user research, usability
+            testing, task success, NPS, and product metrics help me make design decisions with more
+            evidence and less assumption.
           </p>
           <p>
-            I do not build the production code; I design with the implementation context in mind. A
-            design system for a desktop product built in .NET is not the same as one for native iOS
-            or native Android, so I adapt components, interaction patterns, accessibility rules, and
-            handoff documentation to the technology and constraints of each platform.
-          </p>
-          <p>
-            I care about clarity, accessibility, and the practical details that make complex
-            products feel trustworthy for both users and the teams building them.
+            I design with implementation context in mind. I do not develop production code, but I do
+            adapt design systems, components, interaction patterns, and handoff documentation to the
+            platform behind each product; a .NET desktop system is not the same as native iOS, and
+            native Android has its own rules as well.
           </p>
         </div>
       </div>
 
-      <section className="mt-16">
+      <section className="mt-14">
         <h2 className="font-display text-2xl font-bold text-md-on-background">Key achievements</h2>
         <ul className="mt-6 grid gap-4">
           {achievements.map((achievement) => (
@@ -121,7 +112,7 @@ function AboutPage() {
         </ul>
       </section>
 
-      <section className="mt-16">
+      <section className="mt-14">
         <h2 className="font-display text-2xl font-bold text-md-on-background">Core competencies</h2>
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           {competencyGroups.map((group) => (
@@ -145,6 +136,11 @@ function AboutPage() {
           ))}
         </div>
       </section>
+
+      <blockquote className="mt-16 max-w-3xl font-display text-lg leading-relaxed text-md-on-primary-container sm:text-xl">
+        Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
+        that we are wrong to keep our eyes open... -Rob
+      </blockquote>
     </section>
   );
 }
