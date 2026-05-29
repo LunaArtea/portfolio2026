@@ -1,5 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
-import smartProject from "@/assets/smart-project.jpg";
+import smartProject from "@/assets/smartproject.png";
 import smartFlow from "@/assets/smart-flow.jpg";
 import hubAndroid from "@/assets/hub-android.jpg";
 
@@ -10,7 +10,7 @@ const projects = [
       "Desktop application (for Windows) and web; focused on tracking working time and project progress.",
     href: "/smart-project",
     image: smartProject,
-    imageAlt: "Smart Project desktop application mockup",
+    imageAlt: "Smart Project review session screenshot",
   },
   {
     title: "Smart Flow",

@@ -1,6 +1,7 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
 
 import smartProject from "@/assets/smart-project.jpg";
+import smartProjectReview from "@/assets/smartproject.png";
 import smartFlow from "@/assets/smart-flow.jpg";
 
 export const Route = createFileRoute("/smart-project")({
@@ -107,8 +108,8 @@ function SmartProjectPage() {
 
         <div className="overflow-hidden rounded-3xl bg-md-primary-container p-4 shadow-sm">
           <img
-            src={smartProject}
-            alt="Smart Project desktop application mockup"
+            src={smartProjectReview}
+            alt="Smart Project review session screenshot"
             width={1024}
             height={1024}
             className="aspect-[4/3] w-full rounded-2xl object-cover"
@@ -139,6 +140,32 @@ function SmartProjectPage() {
               </p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section className="mt-20 grid gap-8 rounded-3xl bg-md-primary-container p-6 sm:p-8 md:grid-cols-[1.1fr_0.9fr] md:items-center">
+        <div className="overflow-hidden rounded-2xl bg-md-surface shadow-sm">
+          <img
+            src={smartProjectReview}
+            alt="Smart Project remote usability review session"
+            width={1024}
+            height={576}
+            loading="lazy"
+            className="aspect-video w-full object-cover"
+          />
+        </div>
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-md-on-primary-container/70">
+            Testing & alignment
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-md-on-primary-container sm:text-4xl">
+            Reviewing real workflows with users and stakeholders.
+          </h2>
+          <p className="mt-5 text-md-on-primary-container/80">
+            The review sessions helped validate vocabulary, task grouping, scheduling logic, and the
+            way business units were represented inside the product. These conversations turned
+            abstract requirements into interface decisions that could be tested and refined.
+          </p>
         </div>
       </section>
 
