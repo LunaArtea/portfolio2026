@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 const navItems = [
   { to: "/", label: "Work" },
+  { to: "/experience", label: "Experience" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
 ] as const;

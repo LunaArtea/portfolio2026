@@ -28,7 +28,7 @@ export function Hero() {
 
         <div
           aria-label="Interactive 3D WALL-E model"
-          className="relative h-64 w-64 shrink-0 overflow-visible sm:h-72 sm:w-72 md:h-80 md:w-80"
+          className="relative h-56 w-56 shrink-0 overflow-visible sm:h-64 sm:w-64 md:h-72 md:w-72"
         >
           <div aria-hidden className="absolute inset-[18%] rounded-full bg-md-primary-container" />
           <Suspense fallback={null}>
