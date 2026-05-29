@@ -42,7 +42,9 @@ const channels = [
 function ContactPage() {
   return (
     <section className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-      <p className="text-sm tracking-[0.4em] text-md-on-surface-variant">* CONTACT *</p>
+      <p className="text-left font-display text-base font-semibold tracking-[0.4em] text-md-on-surface-variant sm:text-lg">
+        * CONTACT *
+      </p>
       <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-md-on-background sm:text-5xl">
         Let&rsquo;s talk about your next product.
       </h1>
