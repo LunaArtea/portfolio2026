@@ -71,6 +71,42 @@ const experiences = [
   },
 ] as const;
 
+const artifacts = [
+  {
+    title: "UX/UI roadmap example",
+    description:
+      "Work plan and roadmap document used to organize UX/UI phases, activities, and delivery alignment.",
+    file: "plan-de-trabajo.pdf",
+    featured: true,
+  },
+  {
+    title: "Smart Project heuristic analysis",
+    description:
+      "Heuristic review artifact for identifying usability issues and interface improvement opportunities.",
+    file: "analisis-heuristico-smart-project.pdf",
+  },
+  {
+    title: "Dispatch center heuristic analysis",
+    description:
+      "Evaluation document for reviewing clarity, consistency, and operational usability in a dispatch flow.",
+    file: "analisis-heuristico-centro-despacho.pdf",
+  },
+  {
+    title: "Smart Project usability test protocol",
+    description:
+      "Testing protocol used to structure research goals, tasks, scenarios, and validation criteria.",
+    file: "protocolo-pruebas-usabilidad-smart-project.pdf",
+  },
+  {
+    title: "Poderosa requirements document",
+    description:
+      "Requirements artifact used to align product scope, needs, and implementation context.",
+    file: "requerimientos-poderosa-2026.pdf",
+  },
+] as const;
+
+const docHref = (file: string) => `${import.meta.env.BASE_URL}docs/${file}`;
+
 function ExperiencePage() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
@@ -86,6 +122,54 @@ function ExperiencePage() {
           prototyping, and product team collaboration.
         </p>
       </div>
+
+      <section className="mt-14 rounded-3xl bg-md-surface-variant p-6 sm:p-8">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-md-on-surface-variant">
+            UX/UI artifacts
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-bold text-md-on-surface-variant">
+            Process documents and roadmap examples.
+          </h2>
+          <p className="mt-4 text-md-on-surface-variant/80">
+            Selected documentation examples that show how I structure research, evaluation,
+            requirements, usability testing, and UX/UI planning.
+          </p>
+        </div>
+
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
+          {artifacts.map((artifact) => (
+            <a
+              key={artifact.file}
+              href={docHref(artifact.file)}
+              target="_blank"
+              rel="noreferrer noopener"
+              className={`group rounded-2xl border p-5 transition-colors hover:bg-md-primary-container ${
+                artifact.featured
+                  ? "border-md-primary bg-md-primary-container/60"
+                  : "border-md-outline-variant bg-md-surface-container-low"
+              }`}
+            >
+              <div className="flex items-start justify-between gap-4">
+                <div>
+                  <p className="font-display text-xl font-bold text-md-on-surface">
+                    {artifact.title}
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-md-on-surface-variant">
+                    {artifact.description}
+                  </p>
+                </div>
+                <span
+                  aria-hidden
+                  className="material-symbols-outlined text-md-primary transition-transform group-hover:translate-x-1"
+                >
+                  open_in_new
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
 
       <div className="mt-14 space-y-6">
         {experiences.map((experience) => (
