@@ -60,8 +60,8 @@ const experiences = [
   },
   {
     role: "UX UI Designer",
-    company: "Worktem",
-    href: "https://www.workte.am/",
+    company: "Workteam",
+    href: "https://workteam.com.mx/",
     period: "March 2019 - April 2021",
     highlights: [
       "Led the full UX process for new products, from research, wireframes, prototypes, and testing to final design.",
