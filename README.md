@@ -16,7 +16,7 @@ bun install
 bun dev
 ```
 
-Open http://localhost:5173.
+Open http://localhost:5173. The local dev server uses `/` so it works cleanly in Cursor previews.
 
 ## Production build
 
@@ -33,9 +33,9 @@ This project is configured for GitHub Pages at:
 https://lunaartea.github.io/portfolio2026/
 ```
 
-The Vite `base` path is set to `/portfolio2026/`, and the GitHub Actions
-workflow in `.github/workflows/deploy-pages.yml` builds `dist/`, adds the SPA
-`404.html` fallback, and deploys the result to Pages.
+Local development uses `/` as the Vite base path. The GitHub Actions workflow
+sets `VITE_BASE_PATH=/portfolio2026/` before building, adds the SPA `404.html`
+fallback, and deploys `dist/` to Pages.
 
 After this is merged into `main`, enable Pages in the repository settings using
 **GitHub Actions** as the source if GitHub does not enable it automatically.
