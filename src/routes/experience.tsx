@@ -80,22 +80,10 @@ const artifacts = [
     featured: true,
   },
   {
-    title: "Smart Project heuristic analysis",
-    description:
-      "Heuristic review artifact for identifying usability issues and interface improvement opportunities.",
-    file: "analisis-heuristico-smart-project.pdf",
-  },
-  {
     title: "Dispatch center heuristic analysis",
     description:
       "Evaluation document for reviewing clarity, consistency, and operational usability in a dispatch flow.",
     file: "analisis-heuristico-centro-despacho.pdf",
-  },
-  {
-    title: "Smart Project usability test protocol",
-    description:
-      "Testing protocol used to structure research goals, tasks, scenarios, and validation criteria.",
-    file: "protocolo-pruebas-usabilidad-smart-project.pdf",
   },
   {
     title: "Poderosa requirements document",
@@ -133,7 +121,7 @@ function ExperiencePage() {
           </h2>
           <p className="mt-4 text-md-on-surface-variant/80">
             Selected documentation examples that show how I structure research, evaluation,
-            requirements, usability testing, and UX/UI planning.
+            requirements, and UX/UI planning.
           </p>
         </div>
 

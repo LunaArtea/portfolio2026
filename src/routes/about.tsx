@@ -112,7 +112,7 @@ function AboutPage() {
         </ul>
       </section>
 
-      <blockquote className="mt-16 max-w-5xl font-display text-4xl font-black italic leading-tight text-md-on-background sm:text-5xl lg:text-6xl">
+      <blockquote className="mt-16 max-w-5xl font-display text-4xl font-[950] italic leading-tight text-md-primary sm:text-5xl lg:text-6xl">
         Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
         that we are wrong to keep our eyes open... -Rob
       </blockquote>

@@ -24,39 +24,51 @@ export const Route = createFileRoute("/smart-project")({
   component: SmartProjectPage,
 });
 
+const docHref = (file: string) => `${import.meta.env.BASE_URL}docs/${file}`;
+
 const phases = [
   {
-    label: "01 / Empathize",
+    label: "Empathize",
     title: "Understanding the workflow",
     description:
       "I reviewed how teams tracked work time, project progress, task ownership, and operational follow-up across desktop and web contexts. The goal was to identify friction points before proposing interface changes.",
   },
   {
-    label: "02 / Define",
+    label: "Define",
     title: "Clarifying the product problem",
     description:
       "The main challenge was to make project status, time registration, and progress visibility easier to understand without adding more administrative effort for users.",
   },
   {
-    label: "03 / Ideate",
+    label: "Ideate",
     title: "Exploring interaction models",
     description:
       "I mapped flows, wireframes, and screen states for different user roles, considering both Windows desktop constraints and web behaviors so the experience could remain consistent across platforms.",
   },
   {
-    label: "04 / Prototype",
+    label: "Prototype",
     title: "Designing high-fidelity validation",
     description:
       "I created interactive Figma prototypes to validate navigation, hierarchy, forms, tables, and dashboard views with stakeholders before moving into implementation handoff.",
   },
   {
-    label: "05 / Test",
+    label: "Test",
     title: "Reducing uncertainty early",
     description:
       "Usability testing and heuristic review helped refine language, density, visual hierarchy, and task completion patterns before development investment increased.",
+    documents: [
+      {
+        title: "Smart Project heuristic analysis",
+        file: "analisis-heuristico-smart-project.pdf",
+      },
+      {
+        title: "Smart Project usability test protocol",
+        file: "protocolo-pruebas-usabilidad-smart-project.pdf",
+      },
+    ],
   },
   {
-    label: "06 / Deliver",
+    label: "Deliver",
     title: "Preparing design handoff",
     description:
       "The final UI documentation included component behavior, responsive considerations, interaction states, and notes for platform-specific implementation constraints.",
@@ -138,6 +150,27 @@ function SmartProjectPage() {
               <p className="mt-4 text-sm leading-relaxed text-md-on-surface-variant">
                 {phase.description}
               </p>
+              {"documents" in phase ? (
+                <div className="mt-5 space-y-2">
+                  {phase.documents.map((document) => (
+                    <a
+                      key={document.file}
+                      href={docHref(document.file)}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="group flex items-center justify-between gap-3 rounded-xl border border-md-outline-variant bg-md-surface px-4 py-3 text-sm font-semibold text-md-on-surface transition-colors hover:bg-md-primary-container hover:text-md-on-primary-container"
+                    >
+                      <span>{document.title}</span>
+                      <span
+                        aria-hidden
+                        className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1"
+                      >
+                        open_in_new
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              ) : null}
             </article>
           ))}
         </div>
