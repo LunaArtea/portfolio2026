@@ -1,3 +1,5 @@
+import { HeroModel } from "./HeroModel";
+
 export function Hero() {
   return (
     <section className="relative mx-auto max-w-6xl px-6 pt-16 pb-24 sm:pt-24">
@@ -23,9 +25,12 @@ export function Hero() {
         </p>
 
         <div
-          aria-hidden
-          className="h-48 w-48 shrink-0 rounded-full bg-md-primary-container sm:h-56 sm:w-56 md:h-64 md:w-64"
-        />
+          aria-label="Interactive 3D WALL-E model"
+          className="relative h-64 w-64 shrink-0 overflow-visible sm:h-72 sm:w-72 md:h-80 md:w-80"
+        >
+          <div aria-hidden className="absolute inset-[18%] rounded-full bg-md-primary-container" />
+          <HeroModel />
+        </div>
       </div>
     </section>
   );
