@@ -95,6 +95,22 @@ const artifacts = [
 
 const docHref = (file: string) => `${import.meta.env.BASE_URL}docs/${file}`;
 
+const researchLinks = [
+  {
+    title: "Tree testing results",
+    description: "Results view for the dispatch center tree testing exercise.",
+    href: "https://www.uxbeam.com/tt/nresults?fname=Centro+de+despacho+1.1&v=1",
+  },
+  {
+    title: "Detailed by task",
+    description:
+      "Task-path detail view for analyzing how participants moved through the information architecture.",
+    href: "https://www.uxbeam.com/tt/task-paths/24291",
+  },
+] as const;
+
+const gifHref = `${import.meta.env.BASE_URL}gifs/chrome_4DDYyCePL6.gif`;
+
 function ExperiencePage() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
@@ -125,7 +141,49 @@ function ExperiencePage() {
           </p>
         </div>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-6 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+          <div className="overflow-hidden rounded-2xl border border-md-outline-variant bg-md-surface-container-low">
+            <img
+              src={gifHref}
+              alt="Tree testing results interaction preview"
+              width={960}
+              height={540}
+              loading="lazy"
+              className="aspect-video w-full object-cover"
+            />
+          </div>
+
+          <div className="grid gap-4">
+            {researchLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="group rounded-2xl border border-md-primary bg-md-primary-container/60 p-5 transition-colors hover:bg-md-primary-container"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="font-display text-xl font-bold text-md-on-surface">
+                      {link.title}
+                    </p>
+                    <p className="mt-2 text-sm leading-relaxed text-md-on-surface-variant">
+                      {link.description}
+                    </p>
+                  </div>
+                  <span
+                    aria-hidden
+                    className="material-symbols-outlined text-md-primary transition-transform group-hover:translate-x-1"
+                  >
+                    open_in_new
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
           {artifacts.map((artifact) => (
             <a
               key={artifact.file}
