@@ -253,39 +253,17 @@ function SmartProjectPage() {
         </div>
       </section>
 
-      <section className="mt-20 grid gap-8 rounded-3xl bg-md-surface-variant p-8 sm:p-10 md:grid-cols-2 md:items-center">
-        <div>
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-md-on-surface-variant">
-            Next case study
-          </p>
-          <h2 className="mt-4 font-display text-4xl font-bold text-md-on-surface-variant">
-            Smart Flow
-          </h2>
-          <p className="mt-4 max-w-md text-md-on-surface-variant/80">
-            Continue with the geolocation and tracking experience for map-based operational
-            visibility.
-          </p>
-          <Link
-            to="/"
-            hash="featured-work"
-            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-md-on-surface-variant underline underline-offset-4 transition-colors hover:text-md-primary"
-          >
-            View next case
-            <span aria-hidden className="material-symbols-outlined text-base">
-              arrow_forward
-            </span>
-          </Link>
-        </div>
-        <div className="overflow-hidden rounded-2xl bg-md-surface">
-          <img
-            src={smartFlow}
-            alt="Smart Flow geolocation dashboard mockup"
-            width={1024}
-            height={1024}
-            loading="lazy"
-            className="aspect-[4/3] w-full object-cover"
-          />
-        </div>
+      <section className="mt-20 rounded-3xl bg-md-surface-variant p-8 text-center sm:p-10">
+        <p className="text-sm font-semibold uppercase tracking-[0.3em] text-md-on-surface-variant">
+          More case studies
+        </p>
+        <h2 className="mt-4 font-display text-4xl font-bold text-md-on-surface-variant">
+          Coming soon
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-md-on-surface-variant/80">
+          Additional case studies are being organized and will be updated once the remaining
+          materials are ready.
+        </p>
       </section>
     </article>
   );

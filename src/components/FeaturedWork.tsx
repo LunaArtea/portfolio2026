@@ -1,7 +1,5 @@
 import { ProjectCard } from "./ProjectCard";
 import smartProject from "@/assets/smartproject.png";
-import smartFlow from "@/assets/smart-flow.jpg";
-import hubAndroid from "@/assets/hub-android.jpg";
 
 const projects = [
   {
@@ -11,22 +9,6 @@ const projects = [
     href: "/smart-project",
     image: smartProject,
     imageAlt: "Smart Project review session screenshot",
-  },
-  {
-    title: "Smart Flow",
-    description:
-      "Usability improvements for the \u201CGeolocation and Tracking\u201D module, including vehicle tracking and map visualization.",
-    href: "/smart-flow",
-    image: smartFlow,
-    imageAlt: "Smart Flow geolocation dashboard mockup",
-  },
-  {
-    title: "HUB android",
-    description:
-      "A centralized Android app hub for mining operations, designed around underground and surface job roles.",
-    href: "#",
-    image: hubAndroid,
-    imageAlt: "HUB android mobile app mockup",
   },
 ] as const;
 
