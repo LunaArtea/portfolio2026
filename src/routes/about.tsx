@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 
-const HeroModel = lazy(() => import("@/components/HeroModel"));
+const AboutDogModel = lazy(() => import("@/components/AboutDogModel"));
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -121,7 +121,7 @@ function AboutPage() {
           that we are wrong to keep our eyes open... -Rob
         </blockquote>
         <div
-          aria-label="Interactive 3D WALL-E head"
+          aria-label="Interactive 3D dog model"
           className="relative mx-auto h-52 w-52 shrink-0 overflow-visible sm:h-60 sm:w-60"
         >
           <div
@@ -129,7 +129,7 @@ function AboutPage() {
             className="absolute inset-[22%] rounded-full bg-md-primary-container/70"
           />
           <Suspense fallback={null}>
-            <HeroModel />
+            <AboutDogModel />
           </Suspense>
         </div>
       </section>
