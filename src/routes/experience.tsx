@@ -106,6 +106,12 @@ const researchLinks = [
       "Task-path detail view for analyzing how participants moved through the information architecture.",
     href: "https://www.uxbeam.com/tt/task-paths/24291",
   },
+  {
+    title: "Dispatch center protopersonas",
+    description:
+      "Proto-personas used to frame dispatch center user needs and workflow assumptions.",
+    href: "https://www.figma.com/proto/rLUrzV03CysyG2j5rfAgU9/Protopersonas?node-id=47-51&viewport=-2008%2C83%2C0.36&t=K0RHdkLPyMTjbDs3-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=47%3A51&show-proto-sidebar=1&page-id=0%3A1",
+  },
 ] as const;
 
 const gifHref = `${import.meta.env.BASE_URL}gifs/chrome_4DDYyCePL6.gif`;
