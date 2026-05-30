@@ -117,8 +117,8 @@ function AboutPage() {
 
       <section className="mt-16 grid gap-8 md:grid-cols-[1fr_16rem] md:items-center">
         <blockquote className="font-display text-[2.625rem] font-[950] italic leading-tight text-[#8C4A60]">
-          Arrogance is the enemy of design, because as designers, we want to continuosly be assuming
-          that we are wrong to keep our eyes open... -Rob
+          Arrogance is the enemy of design, because as designers, we want to continuously be
+          assuming that we are wrong to keep our eyes open... -Rob
         </blockquote>
         <div
           aria-label="Interactive 3D dog model"
