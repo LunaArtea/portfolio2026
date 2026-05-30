@@ -16,7 +16,7 @@ const projects = [
     title: "Smart Flow",
     description:
       "Usability improvements for the \u201CGeolocation and Tracking\u201D module, including vehicle tracking and map visualization.",
-    href: "#",
+    href: "/smart-flow",
     image: smartFlow,
     imageAlt: "Smart Flow geolocation dashboard mockup",
   },
