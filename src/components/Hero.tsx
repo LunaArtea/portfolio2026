@@ -1,6 +1,4 @@
-import { lazy, Suspense } from "react";
-
-const HeroModel = lazy(() => import("./HeroModel"));
+import HeroModel from "./HeroModel";
 
 export function Hero() {
   return (
@@ -31,9 +29,7 @@ export function Hero() {
           className="relative h-64 w-64 shrink-0 overflow-visible sm:h-72 sm:w-72 md:h-80 md:w-80"
         >
           <div aria-hidden className="absolute inset-[18%] rounded-full bg-md-primary-container" />
-          <Suspense fallback={null}>
-            <HeroModel />
-          </Suspense>
+          <HeroModel />
         </div>
       </div>
     </section>

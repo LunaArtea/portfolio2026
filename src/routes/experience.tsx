@@ -77,18 +77,17 @@ const artifacts = [
     description:
       "Work plan and roadmap document used to organize UX/UI phases, activities, and delivery alignment.",
     file: "plan-de-trabajo.pdf",
-    featured: true,
   },
   {
     title: "Dispatch center heuristic analysis",
     description:
-      "Evaluation document for reviewing clarity, consistency, and operational usability in a dispatch flow.",
+      "Evaluation document for a dispatch center experience used in Mexico and Australia, reviewing clarity, consistency, and operational usability.",
     file: "analisis-heuristico-centro-despacho.pdf",
   },
   {
     title: "Poderosa requirements document",
     description:
-      "Requirements artifact used to align product scope, needs, and implementation context.",
+      "Requirements artifact for Poderosa, a mining operation in Peru, used to align product scope, needs, and implementation context.",
     file: "requerimientos-poderosa-2026.pdf",
   },
 ] as const;
@@ -160,7 +159,7 @@ function ExperiencePage() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="group rounded-2xl border border-md-primary bg-md-primary-container/60 p-5 transition-colors hover:bg-md-primary-container"
+                className="group rounded-2xl border border-md-outline-variant bg-md-surface-container-low p-5 transition-colors hover:bg-md-primary-container"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -190,11 +189,7 @@ function ExperiencePage() {
               href={docHref(artifact.file)}
               target="_blank"
               rel="noreferrer noopener"
-              className={`group rounded-2xl border p-5 transition-colors hover:bg-md-primary-container ${
-                artifact.featured
-                  ? "border-md-primary bg-md-primary-container/60"
-                  : "border-md-outline-variant bg-md-surface-container-low"
-              }`}
+              className="group rounded-2xl border border-md-outline-variant bg-md-surface-container-low p-5 transition-colors hover:bg-md-primary-container"
             >
               <div className="flex items-start justify-between gap-4">
                 <div>
