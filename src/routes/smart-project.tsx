@@ -32,12 +32,24 @@ const phases = [
     title: "Understanding the workflow",
     description:
       "I reviewed how teams tracked work time, project progress, task ownership, and operational follow-up across desktop and web contexts. The goal was to identify friction points before proposing interface changes.",
+    resources: [
+      {
+        title: "Usability testing report",
+        href: "https://app.maze.co/report/interviews/d1cad5f5-5e46-4af0-b0a0-65c2b60a6415/pruebas-de-usabilidad?anonymousToken=391bec75-fd3f-4eb7-b1d7-51c46bb64a6e&embed=true",
+      },
+    ],
   },
   {
     label: "Define",
     title: "Clarifying the product problem",
     description:
       "The main challenge was to make project status, time registration, and progress visibility easier to understand without adding more administrative effort for users.",
+    resources: [
+      {
+        title: "Smart Project heuristic analysis",
+        file: "analisis-heuristico-smart-project.pdf",
+      },
+    ],
   },
   {
     label: "Ideate",
@@ -56,11 +68,7 @@ const phases = [
     title: "Reducing uncertainty early",
     description:
       "Usability testing and heuristic review helped refine language, density, visual hierarchy, and task completion patterns before development investment increased.",
-    documents: [
-      {
-        title: "Smart Project heuristic analysis",
-        file: "analisis-heuristico-smart-project.pdf",
-      },
+    resources: [
       {
         title: "Smart Project usability test protocol",
         file: "protocolo-pruebas-usabilidad-smart-project.pdf",
@@ -72,6 +80,13 @@ const phases = [
     title: "Preparing design handoff",
     description:
       "The final UI documentation included component behavior, responsive considerations, interaction states, and notes for platform-specific implementation constraints.",
+    resources: [
+      {
+        title: "Smart Project Figma design file",
+        href: "https://www.figma.com/design/pcUz8RHyjLMTWrTMPU1cwC/Smart-project?node-id=43-559&t=6Ud9ixORGsmzdivk-1",
+        note: "The design system was built in a separate file, then published as a library and added to this project so components could stay consistent during handoff.",
+      },
+    ],
   },
 ] as const;
 
@@ -150,23 +165,30 @@ function SmartProjectPage() {
               <p className="mt-4 text-sm leading-relaxed text-md-on-surface-variant">
                 {phase.description}
               </p>
-              {"documents" in phase ? (
+              {"resources" in phase ? (
                 <div className="mt-5 space-y-2">
-                  {phase.documents.map((document) => (
+                  {phase.resources.map((resource) => (
                     <a
-                      key={document.file}
-                      href={docHref(document.file)}
+                      key={resource.title}
+                      href={"file" in resource ? docHref(resource.file) : resource.href}
                       target="_blank"
                       rel="noreferrer noopener"
-                      className="group flex items-center justify-between gap-3 rounded-xl border border-md-outline-variant bg-md-surface px-4 py-3 text-sm font-semibold text-md-on-surface transition-colors hover:bg-md-primary-container hover:text-md-on-primary-container"
+                      className="group block rounded-xl border border-md-outline-variant bg-md-surface px-4 py-3 text-sm font-semibold text-md-on-surface transition-colors hover:bg-md-primary-container hover:text-md-on-primary-container"
                     >
-                      <span>{document.title}</span>
-                      <span
-                        aria-hidden
-                        className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1"
-                      >
-                        open_in_new
+                      <span className="flex items-center justify-between gap-3">
+                        <span>{resource.title}</span>
+                        <span
+                          aria-hidden
+                          className="material-symbols-outlined text-base transition-transform group-hover:translate-x-1"
+                        >
+                          open_in_new
+                        </span>
                       </span>
+                      {"note" in resource ? (
+                        <span className="mt-2 block text-xs font-normal leading-relaxed text-md-on-surface-variant">
+                          {resource.note}
+                        </span>
+                      ) : null}
                     </a>
                   ))}
                 </div>
