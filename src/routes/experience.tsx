@@ -110,26 +110,6 @@ const researchLinks = [
 
 const gifHref = `${import.meta.env.BASE_URL}gifs/chrome_4DDYyCePL6.gif`;
 
-const presentations = [
-  {
-    title: "SF 5 UX/UI research presentation",
-    description:
-      "Research presentation summarizing UX/UI findings, analysis, and design direction.",
-    file: "sf-5-uxui.pptx",
-  },
-  {
-    title: "GPS UX/UI benchmark presentation",
-    description:
-      "Benchmark presentation for comparing GPS-related UX/UI patterns and opportunities.",
-    file: "benchmark_ux_ui_gps.pptx",
-  },
-] as const;
-
-const presentationEmbedHref = (file: string) => {
-  const fileUrl = `https://lunaartea.github.io/portfolio2026/presentations/${file}`;
-  return `https://view.officeapps.live.com/op/embed.aspx?src=${encodeURIComponent(fileUrl)}`;
-};
-
 function ExperiencePage() {
   return (
     <section className="mx-auto max-w-5xl px-6 py-16 sm:py-24">
@@ -200,30 +180,6 @@ function ExperiencePage() {
               </a>
             ))}
           </div>
-        </div>
-
-        <div className="mt-8 grid gap-6">
-          {presentations.map((presentation) => (
-            <article
-              key={presentation.file}
-              className="overflow-hidden rounded-2xl border border-md-outline-variant bg-md-surface-container-low"
-            >
-              <div className="p-5">
-                <p className="font-display text-xl font-bold text-md-on-surface">
-                  {presentation.title}
-                </p>
-                <p className="mt-2 text-sm leading-relaxed text-md-on-surface-variant">
-                  {presentation.description}
-                </p>
-              </div>
-              <iframe
-                title={presentation.title}
-                src={presentationEmbedHref(presentation.file)}
-                className="h-[420px] w-full border-0 bg-md-surface"
-                loading="lazy"
-              />
-            </article>
-          ))}
         </div>
 
         <div className="mt-6 grid gap-4 md:grid-cols-2">
