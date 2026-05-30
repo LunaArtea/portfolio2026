@@ -36,6 +36,7 @@ const phases = [
       {
         title: "Usability testing report",
         href: "https://app.maze.co/report/interviews/d1cad5f5-5e46-4af0-b0a0-65c2b60a6415/pruebas-de-usabilidad?anonymousToken=391bec75-fd3f-4eb7-b1d7-51c46bb64a6e",
+        note: "Individual session information cannot be displayed.",
       },
       {
         title: "Protopersonas",
