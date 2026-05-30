@@ -62,6 +62,7 @@ const phases = [
     title: "Designing high-fidelity validation",
     description:
       "I created interactive Figma prototypes to validate navigation, hierarchy, forms, tables, and dashboard views with stakeholders before moving into implementation handoff.",
+    note: "In this specific project, the Figma document used during prototyping continued evolving and expanding until it became part of the Deliver phase.",
   },
   {
     label: "Test",
@@ -165,6 +166,11 @@ function SmartProjectPage() {
               <p className="mt-4 text-sm leading-relaxed text-md-on-surface-variant">
                 {phase.description}
               </p>
+              {"note" in phase ? (
+                <p className="mt-4 rounded-xl bg-md-primary-container/60 p-4 text-xs leading-relaxed text-md-on-primary-container">
+                  {phase.note}
+                </p>
+              ) : null}
               {"resources" in phase ? (
                 <div className="mt-5 space-y-2">
                   {phase.resources.map((resource) => (
