@@ -4,6 +4,7 @@ type ProjectCardProps = {
   href: string;
   image: string;
   imageAlt: string;
+  imageClassName?: string;
   reverse?: boolean;
 };
 
@@ -13,6 +14,7 @@ export function ProjectCard({
   href,
   image,
   imageAlt,
+  imageClassName = "object-cover",
   reverse = false,
 }: ProjectCardProps) {
   const isExternal = href.startsWith("http");
@@ -55,7 +57,7 @@ export function ProjectCard({
           width={1024}
           height={1024}
           loading="lazy"
-          className="aspect-[4/3] w-full object-cover"
+          className={`aspect-[4/3] w-full ${imageClassName}`}
         />
       </div>
     </article>
