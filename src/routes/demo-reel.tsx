@@ -70,8 +70,8 @@ function DemoReelPage() {
           </a>
         </div>
 
-        <div className="overflow-hidden rounded-3xl border border-md-outline-variant bg-md-surface-container-low shadow-xl shadow-md-primary/10">
-          <div className="aspect-video">
+        <div className="mx-auto w-full max-w-sm overflow-hidden rounded-3xl border border-md-outline-variant bg-md-surface-container-low shadow-xl shadow-md-primary/10">
+          <div className="aspect-[9/16] bg-black">
             <iframe
               src={youtubeEmbedUrl}
               title="Luna Galilea 3D demo reel"
