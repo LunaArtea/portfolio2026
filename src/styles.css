@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Material Design 3 token system (light scheme) for the editorial landing page.
+ * Material Design 3 token system (light scheme) for Luna Galilea's portfolio.
  * Values are imported from the Figma MD3 tokens (Light.tokens.json) and
  * mapped to Tailwind v4 utilities via @theme inline. A `.dark` scheme will
  * be filled in when the Dark.tokens.json is available.

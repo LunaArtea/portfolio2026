@@ -74,7 +74,7 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <div className="flex min-h-screen flex-col bg-md-background text-md-on-background">
         <SiteHeader />
-        <main className="flex-1 pt-[81px]">
+        <main className="flex-1 pt-[73px]">
           <Outlet />
         </main>
         <SiteFooter />
