@@ -4,6 +4,7 @@ const navItems = [
   { to: "/", label: "Work" },
   { to: "/experience", label: "Experience" },
   { to: "/about", label: "About" },
+  { to: "/demo-reel", label: "3D", icon: "view_in_ar" },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -15,7 +16,7 @@ export function SiteHeader() {
           Luna Galilea
         </Link>
         <nav aria-label="Primary">
-          <ul className="flex items-center gap-6 text-sm text-md-on-surface-variant">
+          <ul className="flex items-center gap-4 text-sm text-md-on-surface-variant sm:gap-6">
             {navItems.map((item) => (
               <li key={item.to}>
                 <Link
@@ -24,7 +25,14 @@ export function SiteHeader() {
                   activeProps={{ className: "text-md-primary font-semibold" }}
                   activeOptions={{ exact: true }}
                 >
-                  {item.label}
+                  <span className="inline-flex items-center gap-1.5">
+                    {"icon" in item ? (
+                      <span aria-hidden className="material-symbols-outlined text-[1.15rem]">
+                        {item.icon}
+                      </span>
+                    ) : null}
+                    {item.label}
+                  </span>
                 </Link>
               </li>
             ))}
