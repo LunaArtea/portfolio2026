@@ -37,6 +37,7 @@ const competencyGroups = [
       "Advanced Figma: prototypes, variables, and auto layout",
       "Wireframes, mockups, user flows, and responsive UI",
       "Scalable design systems and reusable components",
+      "Diseño de páginas con WordPress",
       "WCAG 2.1 AA/AAA accessibility",
     ],
   },
@@ -62,6 +63,7 @@ const competencyGroups = [
     title: "Platform-Aware Design",
     items: [
       "Web contexts: React, Tailwind, and Bootstrap",
+      "WordPress content layout and page editing",
       "Mobile contexts: native iOS, native Android, and Xamarin",
       "Desktop and legacy contexts: .NET, Windows Forms, C++, C#, and Java",
       "Adobe Suite: Photoshop, Illustrator, and After Effects",
