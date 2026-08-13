@@ -1,31 +1,34 @@
 import { Link } from "@tanstack/react-router";
 
 const navItems = [
-  { to: "/", label: "Work" },
-  { to: "/experience", label: "Experience" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { href: "#ultimas", label: "Últimas" },
+  { href: "#categorias", label: "Categorías" },
+  { href: "#contacto", label: "Contacto" },
 ] as const;
 
 export function SiteHeader() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-md-outline-variant/60 bg-md-background/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-        <Link to="/" className="font-display text-lg font-bold text-md-on-background">
-          Luna Galilea
+    <header className="fixed inset-x-0 top-0 z-50 w-full border-b border-md-outline-variant/60 bg-md-background/90 backdrop-blur">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-6 px-6 py-4">
+        <Link to="/" className="flex items-center gap-3 text-md-on-background">
+          <img
+            src="https://www.marilumeza.com/wp-content/uploads/2026/08/cropped-MRecurso-1-1.png"
+            alt=""
+            className="h-12 w-12 rounded-full object-contain"
+          />
+          <span className="font-display text-lg font-black leading-none">
+            Cuéntamelo
+            <br />
+            Todo
+          </span>
         </Link>
         <nav aria-label="Primary">
-          <ul className="flex items-center gap-6 text-sm text-md-on-surface-variant">
+          <ul className="hidden items-center gap-6 text-sm font-semibold text-md-on-surface-variant sm:flex">
             {navItems.map((item) => (
-              <li key={item.to}>
-                <Link
-                  to={item.to}
-                  className="transition-colors hover:text-md-primary"
-                  activeProps={{ className: "text-md-primary font-semibold" }}
-                  activeOptions={{ exact: true }}
-                >
+              <li key={item.href}>
+                <a href={item.href} className="transition-colors hover:text-md-primary">
                   {item.label}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
