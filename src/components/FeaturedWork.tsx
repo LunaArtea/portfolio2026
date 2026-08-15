@@ -10,6 +10,15 @@ const projects = [
     image: smartProject,
     imageAlt: "Smart Project review session screenshot",
   },
+  {
+    title: "Diseño de páginas con WordPress",
+    description:
+      "Landing and content design for WordPress sites, including editorial structure, visual hierarchy, responsive layout, and publishing-ready page updates.",
+    href: "https://www.marilumeza.com/",
+    image: "https://www.marilumeza.com/wp-content/uploads/2026/08/cropped-MRecurso-1-1.png",
+    imageAlt: "Cuéntamelo Todo WordPress site logo",
+    imageClassName: "object-contain p-12",
+  },
 ] as const;
 
 export function FeaturedWork() {

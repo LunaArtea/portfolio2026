@@ -49,8 +49,8 @@ function ContactPage() {
         Let&rsquo;s talk about your next product.
       </h1>
       <p className="mt-6 max-w-xl text-lg leading-relaxed text-md-on-surface-variant">
-        I&rsquo;m open to freelance projects, full-time roles and conversations about enterprise UX
-        or design systems. You can reach me by email, LinkedIn or WhatsApp.
+        I&rsquo;m open to freelance projects, full-time roles and conversations about enterprise UX,
+        WordPress page design, or design systems. You can reach me by email, LinkedIn or WhatsApp.
       </p>
 
       <ul className="mt-12 space-y-4">
