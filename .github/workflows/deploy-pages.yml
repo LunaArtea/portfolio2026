@@ -35,7 +35,7 @@ jobs:
       - name: Prepare Pages artifact
         run: |
           cp dist/index.html dist/404.html
-          for route in about contact experience smart-project smart-flow; do
+          for route in about contact experience smart-project smart-flow demo-reel; do
             mkdir -p "dist/$route"
             cp dist/index.html "dist/$route/index.html"
           done
