@@ -4,7 +4,7 @@ const navItems = [
   { to: "/", label: "Work" },
   { to: "/experience", label: "Experience" },
   { to: "/about", label: "About" },
-  { to: "/demo-reel", label: "3D", icon: "view_in_ar" },
+  { to: "/demo-reel", label: "3D demo reel", icon: "view_in_ar", iconOnly: true },
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -21,6 +21,8 @@ export function SiteHeader() {
               <li key={item.to}>
                 <Link
                   to={item.to}
+                  aria-label={"iconOnly" in item ? item.label : undefined}
+                  title={"iconOnly" in item ? item.label : undefined}
                   className="transition-colors hover:text-md-primary"
                   activeProps={{ className: "text-md-primary font-semibold" }}
                   activeOptions={{ exact: true }}
@@ -31,7 +33,7 @@ export function SiteHeader() {
                         {item.icon}
                       </span>
                     ) : null}
-                    {item.label}
+                    <span className={"iconOnly" in item ? "sr-only" : undefined}>{item.label}</span>
                   </span>
                 </Link>
               </li>
