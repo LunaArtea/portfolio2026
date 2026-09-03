@@ -37,10 +37,6 @@ const phases = [
         title: "Protopersonas",
         href: "https://www.figma.com/proto/rLUrzV03CysyG2j5rfAgU9/Protopersonas?node-id=26-2&viewport=-1150%2C85%2C0.58&t=yVFz1tG3bR1atxAI-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=26%3A2&page-id=0%3A1",
       },
-      {
-        title: "Smart Project usability test protocol",
-        file: "protocolo-pruebas-usabilidad-smart-project.pdf",
-      },
     ],
   },
   {
@@ -50,9 +46,8 @@ const phases = [
       "The main challenge was to make project status, time registration, and progress visibility easier to understand without adding more administrative effort for users.",
     resources: [
       {
-        title: "Usability testing report",
-        href: "https://app.maze.co/report/interviews/d1cad5f5-5e46-4af0-b0a0-65c2b60a6415/pruebas-de-usabilidad?anonymousToken=391bec75-fd3f-4eb7-b1d7-51c46bb64a6e",
-        note: "Individual session information cannot be displayed.",
+        title: "Smart Project heuristic analysis",
+        file: "analisis-heuristico-smart-project.pdf",
       },
     ],
   },
@@ -94,8 +89,13 @@ const phases = [
       "Usability testing and heuristic review helped refine language, density, visual hierarchy, and task completion patterns before development investment increased.",
     resources: [
       {
-        title: "Smart Project heuristic analysis",
-        file: "analisis-heuristico-smart-project.pdf",
+        title: "Usability testing report",
+        href: "https://app.maze.co/report/interviews/d1cad5f5-5e46-4af0-b0a0-65c2b60a6415/pruebas-de-usabilidad?anonymousToken=391bec75-fd3f-4eb7-b1d7-51c46bb64a6e",
+        note: "Individual session information cannot be displayed.",
+      },
+      {
+        title: "Smart Project usability test protocol",
+        file: "protocolo-pruebas-usabilidad-smart-project.pdf",
       },
     ],
   },
