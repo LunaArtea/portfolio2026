@@ -25,6 +25,41 @@ bun run build
 bun run preview
 ```
 
+## Free hosting outside GitHub
+
+The easiest free option for this static portfolio is
+[Netlify](https://www.netlify.com/). It supports drag-and-drop uploads, gives the
+site a free `netlify.app` subdomain, and works with React/TanStack Router when
+the SPA fallback is included.
+
+### Manual upload with Netlify Drop
+
+```bash
+bun run package:netlify
+```
+
+This creates:
+
+- `dist/` - the production site folder.
+- `portfolio-netlify.zip` - a ZIP you can upload directly.
+
+Then open [Netlify Drop](https://app.netlify.com/drop) and drag
+`portfolio-netlify.zip` into the browser. Netlify will publish the site and give
+you a free URL.
+
+### Automatic Netlify deploys
+
+If the repo is connected to Netlify later, use these settings:
+
+```txt
+Build command: bun run build:netlify
+Publish directory: dist
+```
+
+The `netlify.toml` file already contains these settings and the SPA redirect.
+The `public/_redirects` file is also copied into `dist/` so manual uploads can
+open routes like `/about`, `/experience`, and `/smart-project` directly.
+
 ## GitHub Pages
 
 This project is configured for GitHub Pages at:
