@@ -1,0 +1,11 @@
+[build]
+  command = "bun run build:netlify"
+  publish = "dist"
+
+[build.environment]
+  VITE_BASE_PATH = "/"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
