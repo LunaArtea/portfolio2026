@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "build": "vite build",
     "build:netlify": "VITE_BASE_PATH=/ vite build",
-    "package:netlify": "bun run build:netlify && cd dist && zip -r ../portfolio-netlify.zip .",
+    "package:netlify": "bun run build:netlify && rm -f portfolio-netlify.zip && cd dist && zip -r ../portfolio-netlify.zip .",
     "build:dev": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint .",
